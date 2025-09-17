@@ -19,3 +19,37 @@ function buildArticle(array $row): array {
         'author'    => trim((string)$row['author']),
     ];
 }
+
+
+
+// Tests pour vérifier le comportement de la fonction
+$testCases = [
+    // Cas 1 : Données complètes
+    [
+        'title' => 'Mon article',
+        'excerpt' => 'Résumé de l\'article',
+        'views' => '42',
+        'published' => true,
+        'author' => 'Jean Dupont',
+    ],
+    // Cas 2 : Données manquantes
+    [
+        'title' => 'Article incomplet',
+    ],
+    // Cas 3 : Données avec valeurs vides ou problématiques
+    [
+        'title' => 'Article vide',
+        'excerpt' => '',
+        'views' => -5,
+        'published' => null,
+        'author' => '',
+    ],
+];
+
+// Exécuter et afficher les tests
+foreach ($testCases as $index => $test) {
+    echo "Test " . ($index + 1) . ":\n";
+    echo "Entrée : " . print_r($test, true) . "\n";
+    echo "Sortie : " . print_r(buildArticle($test), true) . "\n\n";
+}
+?>
