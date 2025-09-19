@@ -1,0 +1,18 @@
+{
+    "name": "solicode/interfaces",
+    "description": "Projet d'apprentissage PHP POO avec interfaces",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Solicode\\Interfaces\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fadna",
+            "email": "fadna.lakhouchen@gmail.com"
+        }
+    ],
+    "require": {}
+}
